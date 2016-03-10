@@ -1,0 +1,93 @@
+nav.DropDownMenu {
+	cursor: default;
+	font-weight: 900;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+nav.DropDownMenu * {
+	box-sizing: border-box;
+}
+nav.DropDownMenu ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+nav.DropDownMenu a {
+	color: inherit;
+	text-decoration: none;
+}
+@media (min-width: 768.1px) {
+	nav.DropDownMenu {
+		font-size: 13px;
+	}
+	nav.DropDownMenu * {
+		transition-property: background-color, color, visibility, opacity;
+		transition-timing-function: linear;
+		transition-duration: 0.2s;
+	}
+	nav.DropDownMenu > ul {
+		height: 100%;
+	}
+	nav.DropDownMenu > ul > li {
+		height: 100%;
+		display: table;
+		float: left;
+		position: relative;
+	}
+	nav.DropDownMenu > ul > li > a {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 10px;
+	}
+	nav.DropDownMenu > ul > li > ul {
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		visibility: hidden;
+	}
+	nav.DropDownMenu > ul > li.open > ul {
+		opacity: 1;
+		visibility: visible;
+	}
+	nav.DropDownMenu > ul > li > ul > li > a {
+		display: block;
+		border-bottom: 1px solid;
+		padding: 13px 10px;
+		min-width: 150px;
+		max-width: 250px;
+	}
+}
+@media (max-width: 768px) {
+	nav.DropDownMenu {
+		font-size: 18px;
+		display: none;
+	}
+	nav.DropDownMenu.open {
+		display: block;
+	}
+	nav.DropDownMenu a {
+		display: block;
+		border-bottom: 1px solid;
+	}
+	nav.DropDownMenu > ul > li > a {
+		padding: 20px;
+	}
+	nav.DropDownMenu > ul > li > ul {
+		display: none;
+	}
+	nav.DropDownMenu > ul > li.open > ul {
+		display: block;
+	}
+	nav.DropDownMenu > ul > li > ul > li > a {
+		padding: 20px 40px;
+	}
+}
+
+nav.DropDownMenu { color: #036; }
+nav.DropDownMenu > ul > li:hover, nav.DropDownMenu > ul > li.open, nav.DropDownMenu > ul > li > ul { background-color: #036; color: #6CF; }
+nav.DropDownMenu > ul > li > a { border-color: #FFF; }
+nav.DropDownMenu > ul > li.open > a, nav.DropDownMenu > ul > li > ul > li > a { border-color: #048; }
+nav.DropDownMenu > ul > li > ul > li:hover > a { background-color: #06A; }
