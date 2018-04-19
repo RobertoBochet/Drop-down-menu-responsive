@@ -1,0 +1,64 @@
+body {
+	font-family: Geneva, sans-serif;
+	margin: 0;
+	min-width: 200px;
+}
+body > header, body > header * {
+	z-index: 100;
+}
+body > header {
+	margin: 0 auto;
+	display: flex;
+	height: 40px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+body > header svg {
+	stroke-linecap: round;
+	box-sizing: border-box;
+	padding: 2px;
+	height: 100%;
+	width: 60px;
+}
+body > header > a {
+	height: inherit;
+	display: block;
+}
+body > header > nav {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+@media (min-width: 768.1px) {
+	body > header > svg {
+		display: none;
+	}
+}
+
+body > p {
+	margin: 0 auto;
+	font-size: 19px;
+	max-width: 800px;
+	text-align: justify; 
+}
+
+body > footer {
+	font-size: 12px;
+	font-style: italic;
+	margin-top: 10px;
+	text-align: center;
+}
+body > footer > a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/*Colours*/
+header { background-color: #EEE; }
+body > header svg { stroke: #036; }
+nav.DropDownMenu { color: #036; }
+nav.DropDownMenu > ul > li:hover, nav.DropDownMenu > ul > li.open, nav.DropDownMenu > ul > li > ul { background-color: #036; color: #6CF; }
+nav.DropDownMenu > ul > li > a { border-color: #FFF; }
+nav.DropDownMenu > ul > li.open > a, nav.DropDownMenu > ul > li > ul > li > a { border-color: #048; }
+nav.DropDownMenu > ul > li > ul > li:hover > a { background-color: #06A; }
