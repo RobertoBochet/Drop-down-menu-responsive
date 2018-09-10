@@ -18,10 +18,17 @@
 			if($(this).parent().css("flex-direction") == "row")
 				if(!$(this).hasClass("click"))
 					$(this).removeClass("open");
+		}).children("ul").click(function(e) {
+			e.stopPropagation();
+		});
+		
+		self.find("a[href]").click(function() {
+			self.removeClass("open")
+			.children("ul").children("li:has(ul)").removeClass("open").removeClass("click");
 		});
 		
 		button.click(function() {
-			$(self).toggleClass("open");
+			self.toggleClass("open");
 		});
 		
 		return this;
