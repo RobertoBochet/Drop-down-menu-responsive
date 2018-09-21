@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<title>Drop down menu responsive</title>
+	
+	<script src="../dropdownmenu.js"></script>
+	<link rel="stylesheet" type="text/css" href="../dropdownmenu.css" />
 
 	<link rel="stylesheet" type="text/css" href="example.css" />
-	<link rel="stylesheet" type="text/css" href="dropdownmenu.css" />
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="dropdownmenu.js"></script>
 	<script>
-		$(function() {
-			$("nav.DropDownMenu").DropDownMenu($("#DropDownMenuButton"));
+		var menu;
+		document.addEventListener('DOMContentLoaded',() => {
+			menu = new DropDownMenu(document.querySelector("#menu"), document.querySelector("#menuButton"));
 		});
 	</script>
 </head>
@@ -24,13 +24,13 @@
 		</svg>
 	</a>
 	<!--Mobile version opening button-->
-	<svg id="DropDownMenuButton" viewbox="0 0 8 8">
+	<svg id="menuButton" viewbox="0 0 8 8">
 		<line x1="1" x2="7" y1="2" y2="2" />
 		<line x1="1" x2="7" y1="4" y2="4" />
 		<line x1="1" x2="7" y1="6" y2="6" />
 	</svg>
 	<!--Drop down menu-->
-	<nav class="DropDownMenu">
+	<nav class="DropDownMenu" id="menu">
 		<ul>
 			<li><a href="#">ITEM 1</a></li>
 			<li><a>ITEM 2 +</a>
