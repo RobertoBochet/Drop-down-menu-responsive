@@ -4,7 +4,6 @@ nav.DropDownMenu {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
-	font-weight: 800;
 	white-space: nowrap;
 }
 nav.DropDownMenu * {

@@ -12,6 +12,7 @@ body > header {
 	height: 40px;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	font-weight: 900;
 }
 body > header svg {
 	stroke-linecap: round;
