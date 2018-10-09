@@ -1,4 +1,8 @@
 /*jshint esversion: 6 */
+var DropDownMenu;
+(()=>{
+"use strict";
+DropDownMenu = DropDownMenu ||//Avoids multiple declarations
 class DropDownMenu
 {
 	constructor(_menu, _button)
@@ -82,4 +86,5 @@ class DropDownMenu
 	{
 		return window.getComputedStyle(this.firstLayer)["flex-direction"] === "row";
 	}
-}
+};
+})();
